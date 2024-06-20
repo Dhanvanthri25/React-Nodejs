@@ -1,0 +1,23 @@
+.crd {
+    /* width: 150%;  */
+    padding-right: 100px !important;
+    padding-left: 100px !important;
+    padding-top: 65px !important;
+    padding-bottom: 65px !important;
+  }
+  
+  .card.bg-white {
+    background-color: transparent !important; 
+    padding: 50px; 
+    border-radius: 20px !important;
+  }
+  
+  .card.bg-white .form-group {
+    margin-bottom: 20px;
+  }
+  .containers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 95vh;
+  }
