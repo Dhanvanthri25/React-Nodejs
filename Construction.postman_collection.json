@@ -1,0 +1,692 @@
+{
+	"info": {
+		"_postman_id": "48a3a6df-2b09-4e2e-8bb8-97cce41e79a2",
+		"name": "Construction",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33824202",
+		"_collection_link": "https://cloudy-moon-809764.postman.co/workspace/46436acf-e494-44e5-814f-cf79a2f17b72/collection/31771933-48a3a6df-2b09-4e2e-8bb8-97cce41e79a2?action=share&source=collection_link&creator=33824202"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "UserRegister",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"Dharnesh212\",\r\n    \"password\" : \"1234\",\r\n    \"address\" : \"Thudiyalur\",\r\n    \"city\" : \"Coimbatore\",\r\n    \"gender\" : \"Male\",\r\n    \"dob\" : \"dob\",\r\n    \"doj\" : \"doj\",\r\n    \"mobileNumber\" : \"9906754432\",\r\n    \"age\" : \"23\",\r\n    \"role\" : \"CEO\",\r\n    \"branch\" : \"Cbe\",\r\n    \"email\" : \"dharnesh@gmail.com\",\r\n    \"status\" : \"Active\",\r\n    \"profileimage\" : \"profileimage\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/user/register",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UserLogin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"deepak@gmail.com\",\r\n    \"password\" : \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/user/login",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetuserbyId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJVc2VyMDAwMDMiLCJlbWFpbCI6ImRoYXJuZXNoQGdtYWlsLmNvbSIsImlhdCI6MTcxMTA4NDk1MSwiZXhwIjoxNzExMDg4NTUxfQ.k3GpGkd1GnM-KZc_7DLH2bxtUP0KLlyfZcetLQwa7uM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/user/getbyid/65fd136d388fd7f94754f8a9",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"user",
+								"getbyid",
+								"65fd136d388fd7f94754f8a9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllUsers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJVc2VyMDAwMDIiLCJlbWFpbCI6ImRlZXBha0BnbWFpbC5jb20iLCJpYXQiOjE3MTExNzI4NDksImV4cCI6MTcxMTE3NjQ0OX0.BaBm-K_ZlpC1iYAlUaUREDwUz4x3OPpF0Qva4Oc4aXY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/user/get_all_users",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"user",
+								"get_all_users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJVc2VyMDAwMDMiLCJlbWFpbCI6ImRoYXJuZXNoQGdtYWlsLmNvbSIsImlhdCI6MTcxMTA4NDk1MSwiZXhwIjoxNzExMDg4NTUxfQ.k3GpGkd1GnM-KZc_7DLH2bxtUP0KLlyfZcetLQwa7uM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"age\" : \"20\",\r\n    \"dob\" : \"dobbbbbb\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/user/updatebyid/65fd136d388fd7f94754f8a9",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"user",
+								"updatebyid",
+								"65fd136d388fd7f94754f8a9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJVc2VyMDAwMDMiLCJlbWFpbCI6ImRoYXJuZXNoQGdtYWlsLmNvbSIsImlhdCI6MTcxMTA4NDk1MSwiZXhwIjoxNzExMDg4NTUxfQ.k3GpGkd1GnM-KZc_7DLH2bxtUP0KLlyfZcetLQwa7uM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/user/deletebyid/65fd17d8c842b587c9e4a02b",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"user",
+								"deletebyid",
+								"65fd17d8c842b587c9e4a02b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Roles",
+			"item": [
+				{
+					"name": "AddRole",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJVc2VyMDAwMDIiLCJlbWFpbCI6ImRlZXBha0BnbWFpbC5jb20iLCJpYXQiOjE3MTExOTMwMjQsImV4cCI6MTcxMTE5NjYyNH0.0gdrgc-jZVO9R0KDHsmNkJ5L5Y5xT_Qmp9zBAAyUVqI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"role\": \"Audit Trailsdvfsdvsccfsdcf\",\r\n    \"roleDescription\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/role/addrole",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"role",
+								"addrole"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllRoles",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJVc2VyMDAwMDIiLCJlbWFpbCI6ImRlZXBha0BnbWFpbC5jb20iLCJpYXQiOjE3MTExOTQ3ODIsImV4cCI6MTcxMTE5ODM4Mn0.Bw-Y6i1YqwBtovN4uQ2ggtL-dEPfNmLyckHJ_LFJFX0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/role/get_all_roles",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"role",
+								"get_all_roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetRoleById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJVc2VyMDAwMDIiLCJlbWFpbCI6ImRlZXBha0BnbWFpbC5jb20iLCJpYXQiOjE3MTExOTQ3ODIsImV4cCI6MTcxMTE5ODM4Mn0.Bw-Y6i1YqwBtovN4uQ2ggtL-dEPfNmLyckHJ_LFJFX0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/role/get_role_byId/65fec20a333f681ecf36497e",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"role",
+								"get_role_byId",
+								"65fec20a333f681ecf36497e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateRole",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJVc2VyMDAwMDIiLCJlbWFpbCI6ImRlZXBha0BnbWFpbC5jb20iLCJpYXQiOjE3MTExOTQ3ODIsImV4cCI6MTcxMTE5ODM4Mn0.Bw-Y6i1YqwBtovN4uQ2ggtL-dEPfNmLyckHJ_LFJFX0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"role\" : \"ol\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/role/UpdateById/65fec39be4d4f3186f50647b",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"role",
+								"UpdateById",
+								"65fec39be4d4f3186f50647b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteRole",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJVc2VyMDAwMDMiLCJlbWFpbCI6ImRoYXJuZXNoQGdtYWlsLmNvbSIsImlhdCI6MTcxMTA4NDk1MSwiZXhwIjoxNzExMDg4NTUxfQ.k3GpGkd1GnM-KZc_7DLH2bxtUP0KLlyfZcetLQwa7uM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/role/DeletebyId/65fd1c07c842b587c9e4a03d",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"role",
+								"DeletebyId",
+								"65fd1c07c842b587c9e4a03d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Permittype",
+			"item": [
+				{
+					"name": "AddPermit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJVc2VyMDAwMDMiLCJlbWFpbCI6ImRoYXJuZXNoQGdtYWlsLmNvbSIsImlhdCI6MTcxMTA5MjMwNywiZXhwIjoxNzExMDk1OTA3fQ.2Atc2v3WNDKug7SrRHxx9_AokJlSefoPjqPkWcFJOd0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"permittypeName\" : \"Work From Height\",\r\n    \"permitCode\": \"WAH\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/permit/addpermittype",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"permit",
+								"addpermittype"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllPermit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJVc2VyMDAwMDIiLCJlbWFpbCI6ImRlZXBha0BnbWFpbC5jb20iLCJpYXQiOjE3MTExNzI4NDksImV4cCI6MTcxMTE3NjQ0OX0.BaBm-K_ZlpC1iYAlUaUREDwUz4x3OPpF0Qva4Oc4aXY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/permit/getallpermittype",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"permit",
+								"getallpermittype"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPermitById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJVc2VyMDAwMDMiLCJlbWFpbCI6ImRoYXJuZXNoQGdtYWlsLmNvbSIsImlhdCI6MTcxMTEwMTg2NSwiZXhwIjoxNzExMTA1NDY1fQ.bqXgmM3zZ8SsCCtvWXXaphKKkACQfhl5rSpcRPy_-Vs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/permit/get_permitby_Id/65fd34eb80de577731c38a1c",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"permit",
+								"get_permitby_Id",
+								"65fd34eb80de577731c38a1c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdatePermit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJVc2VyMDAwMDMiLCJlbWFpbCI6ImRoYXJuZXNoQGdtYWlsLmNvbSIsImlhdCI6MTcxMTA5MjMwNywiZXhwIjoxNzExMDk1OTA3fQ.2Atc2v3WNDKug7SrRHxx9_AokJlSefoPjqPkWcFJOd0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"permittypeName\" :\"Updatededdd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/permit/update_permitby_Id/65fd353178c5c76af985deaf",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"permit",
+								"update_permitby_Id",
+								"65fd353178c5c76af985deaf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletePermit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJVc2VyMDAwMDMiLCJlbWFpbCI6ImRoYXJuZXNoQGdtYWlsLmNvbSIsImlhdCI6MTcxMTA5MjMwNywiZXhwIjoxNzExMDk1OTA3fQ.2Atc2v3WNDKug7SrRHxx9_AokJlSefoPjqPkWcFJOd0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/permit/delete_permitby_Id/65fd34eb80de577731c38a1c",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"permit",
+								"delete_permitby_Id",
+								"65fd34eb80de577731c38a1c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ApplicantForm",
+			"item": [
+				{
+					"name": "AddApplicant",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJVc2VyMDAwMDMiLCJlbWFpbCI6ImRoYXJuZXNoQGdtYWlsLmNvbSIsImlhdCI6MTcxMTExMDkxMywiZXhwIjoxNzExMTE0NTEzfQ.KoWYrJ4Zzj8FpNsqaONdEm7efWSbDPqsfJkpo0nEL8I",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"UserId\" : \"UserId231\",\r\n    \"refno\" : \"refno\",\r\n    \"permitType\" : \"permitType321\",\r\n    \"projectCode\" : \"projectCode\",\r\n    \"descofWork\" : \"descofWork\",\r\n    \"startdateofWork\" : \"startdateofWork321\",\r\n    \"startdateofStarttime\" : \"startdateofStarttim3123e\",\r\n    \"startdateofEndtime\" : \"startdateofEndtime\",\r\n    \"enddateofWork\" : \"enddateofWork\",\r\n    \"enddateofStarttime\" : \"enddateofStarttime\",\r\n    \"enddateofEndtime\" : \"enddateofEndtime\",\r\n    \"locationofWork\" : \"locationofWork\",\r\n    \"locationImages\" : \"locationImages\",\r\n    \"checklist\" : \"UschecklisterId\",\r\n    \"applicantName\" : \"applicantName\",\r\n    \"applicantRemarks\" : \"applicant321Remarks\",\r\n    \"applicantdateofSubmit\" : \"applicantdateofS3q2133ubmit\",\r\n    \"applicantDescription\" : \"applicantDescription\",\r\n    \"applicantSignature\" : \"applicantSignature\",\r\n    \"aplicationStatus\" : \"aplicationStatus\",\r\n    \"supervisorVerified\" : \"supervisorVe21213rified\",\r\n    \"safetyassessorVerified\" : \"safetyassessor213123Verified\",\r\n    \"projectmanagerVerified\" : \"projectmanag21312312312erVerified\",\r\n    \"auditVerified\" : \"auditVeri3123123fied\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/ApplicantForm/add_Applicant",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"ApplicantForm",
+								"add_Applicant"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetApplicantdetails",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJVc2VyMDAwMDIiLCJlbWFpbCI6ImRlZXBha0BnbWFpbC5jb20iLCJpYXQiOjE3MTExNzI4NDksImV4cCI6MTcxMTE3NjQ0OX0.BaBm-K_ZlpC1iYAlUaUREDwUz4x3OPpF0Qva4Oc4aXY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/ApplicantForm/get_all_applicant",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"ApplicantForm",
+								"get_all_applicant"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetApplicantById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJVc2VyMDAwMDIiLCJlbWFpbCI6ImRlZXBha0BnbWFpbC5jb20iLCJpYXQiOjE3MTExNzI1MDgsImV4cCI6MTcxMTE3NjEwOH0.5SsYEZA1yWu3eQ0ICekjc1Entiie9Ggf8DmSE5I6Tiw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/ApplicantForm/getapplicant_byId/65fd6ba653bdb2d2df6bfdf6",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"ApplicantForm",
+								"getapplicant_byId",
+								"65fd6ba653bdb2d2df6bfdf6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Applicant",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJVc2VyMDAwMDMiLCJlbWFpbCI6ImRoYXJuZXNoQGdtYWlsLmNvbSIsImlhdCI6MTcxMTExMDkxMywiZXhwIjoxNzExMTE0NTEzfQ.KoWYrJ4Zzj8FpNsqaONdEm7efWSbDPqsfJkpo0nEL8I",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"refno\" : \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/ApplicantForm/updateapplicant_byId/65fd6bc753bdb2d2df6bfdfa",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"ApplicantForm",
+								"updateapplicant_byId",
+								"65fd6bc753bdb2d2df6bfdfa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJVc2VyMDAwMDMiLCJlbWFpbCI6ImRoYXJuZXNoQGdtYWlsLmNvbSIsImlhdCI6MTcxMTExMDkxMywiZXhwIjoxNzExMTE0NTEzfQ.KoWYrJ4Zzj8FpNsqaONdEm7efWSbDPqsfJkpo0nEL8I",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/ApplicantForm/deleteapplicant_byId/65fd7b918ebf765da6430209",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"ApplicantForm",
+								"deleteapplicant_byId",
+								"65fd7b918ebf765da6430209"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
